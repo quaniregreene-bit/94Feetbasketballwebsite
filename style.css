@@ -1,0 +1,206 @@
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+/* === RESET + BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #474646;
+  color: #f1f1f1;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* === HEADER === */
+header {
+  background-color: #f9f6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 20px rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px;
+  filter: brightness(1.1);
+}
+
+/* Navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links li a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  padding: 0.3rem 0;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #4f4e4e;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* === SECTIONS === */
+main {
+  padding: 2rem 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+/* === BOXES / CARDS === */
+.event-item,
+.training-box,
+.product-card {
+  background: #1c1c1c;
+  border: 1px solid #333;
+  padding: 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item:hover,
+.training-box:hover,
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* === PRODUCT GRID === */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #000;
+  color: #888;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* === RESPONSIVE NAV === */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+}
+
+/* === UTILITY CLASSES === */
+.text-center {
+  text-align: center;
+}
+
+section.centered {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
