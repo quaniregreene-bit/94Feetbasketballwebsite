@@ -301,14 +301,17 @@ section.centered {
     margin-left: auto;
   }
 
+  /* Hide nav by default */
   .nav-links {
-    display: none;
+    display: none;        /* MUST be none to hide initially */
     width: 100%;
+    flex-direction: column;
+    gap: 1rem;            /* optional spacing between links */
   }
 
+  /* Show nav when active */
   .nav-links.active {
     display: flex;
-    flex-direction: column;
   }
 }
 
