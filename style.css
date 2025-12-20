@@ -284,6 +284,34 @@ section.centered {
     padding: 1.5rem 1rem;
   }
 }
+/* === MOBILE-ONLY NAV CONTROL === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 
 
