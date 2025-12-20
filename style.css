@@ -204,3 +204,86 @@ section.centered {
   text-align: center;
 }
 
+/* === MOBILE POLISH (PHONE-FIRST LOOK) === */
+@media screen and (max-width: 480px) {
+
+  /* BODY */
+  body {
+    font-size: 15px;
+  }
+
+  /* HEADER */
+  header {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  /* NAVIGATION */
+  .nav-links {
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links li a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+  }
+
+  /* MAIN CONTENT */
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2, h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* BUTTONS */
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  /* CARDS / BOXES */
+  .event-item,
+  .training-box,
+  .product-card {
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+
+  /* PRODUCT GRID */
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 12px;
+    padding: 1.5rem 1rem;
+  }
+}
+
+
+
